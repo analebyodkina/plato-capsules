@@ -1,0 +1,35 @@
+@mixin text($ff, $fz, $lh, $fw, $color) {
+    font-family: $ff;
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $color;
+  }
+  @mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin desktop-small {
+    @media (max-width: $desktop-small) {
+      @content;
+    }
+  }
+  @mixin tablet{
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+  
+  @mixin tablet-small{
+    @media (max-width: $tablet-small) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }

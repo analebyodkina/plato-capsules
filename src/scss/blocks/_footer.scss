@@ -1,0 +1,104 @@
+.footer {
+  &__top {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+
+  &__form {
+    padding-right: 50rem;
+  }
+
+  &__links {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 11rem;
+    }
+    a {
+      @include text($ffMain, 16rem, 26rem, 400, $primary);
+	  transition: $transition;
+    }
+    .btn {
+      @include text($ffMain, 16rem, 26rem, 400, $secondary);
+      padding: 6rem 38rem;
+      margin-bottom: 30rem;
+      border: 1rem solid $primary;
+    }
+  }
+
+  &__socials {
+  }
+
+  &__bottom {
+  }
+}
+.form {
+  &__title {
+    @include text($ffMain, 44rem, 53rem, 400, $primary);
+    margin-bottom: 31rem;
+  }
+  &__body {
+    position: relative;
+    margin-bottom: 17rem;
+    border-bottom: 1rem solid $primary;
+  }
+  &__input {
+    width: 100%;
+    color: $primary;
+    padding: 7rem 45rem 7rem 10rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+  &__checkbox {
+    position: absolute;
+    right: 2rem;
+  }
+  .checkbox__input {
+    display: none;
+  }
+  .checkbox__mark {
+    display: inline-block;
+    width: 30rem;
+    height: 30rem;
+    border: 1rem solid $primary;
+    position: relative;
+    transition: 0.2s all ease-in-out;
+  }
+  .checkbox__mark::after {
+    content: "\2714";
+    color: $primary;
+    font-size: 24rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  .checkbox__input:checked ~ .checkbox__mark::after {
+    opacity: 1;
+  }
+  .checkbox__input:checked ~ .checkbox__mark {
+    background: $green;
+    opacity: 1;
+  }
+
+  &__info {
+    max-width: 234rem;
+    text-align: center;
+    @include text($ffMain, 12rem, 19rem, 400, $primary);
+  }
+}
+@media (hover: hover) {
+  .footer {
+    .btn {
+      &:hover {
+        color: $primary;
+      }
+    }
+    .footer__links a {
+      &:hover {
+        color: $green;        
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.header {
+  background: $primary;
+  &__container {
+    @include flex-between;
+    padding: 35rem 40rem 40rem;    
+  }
+  &__nav {
+    flex-grow: 1;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 28rem;
+    a {
+      display: inline-block;
+      padding: 10rem 20rem;
+      border-radius: $radius;
+      @include text($ffMain, 16rem, 26rem, 400, $grey-text);
+      transition: $transition;
+      @include tablet {
+        @include text($ffMain, 22rem, 32rem, 400, $primary);
+      }
+    }
+    li {
+      &:first-child {
+        margin-left: auto;
+      }
+      &:nth-child(4) {
+        margin-left: auto;
+      }
+    }
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+      font-size: 28px;
+    }
+  }
+  &__btn {
+    @include text($ffMain, 16rem, 26rem, 400, $primary);
+    padding: 12px 47px;
+  }
+
+  &__options {
+  }
+}
+@media (hover: hover) {
+  .header__list a {
+    &:hover,
+    &:active {
+      box-shadow: inset 3rem 3rem 15rem $green;
+      color: $secondary;
+    }
+  }
+}

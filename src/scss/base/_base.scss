@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 1px;
+}
+
+body {
+  font-family: $ffMain;
+  background: #e5e5e5;
+}
+.wrapper {
+  max-width: 1920px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin-inline: auto;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  border-radius: $radius;
+  border: 2px solid $primary;
+  background: $primary;
+  padding: 16px 77px;
+  @include text($ffMain, 22rem, 35.75rem, 400, $secondary);
+  text-align: center;
+  transition: $transition;
+  &:active {
+    transform: scale(0.95);
+  }
+  &._primary {
+    background: transparent;
+    color: $primary;
+    border: 2px solid $primary;
+  }
+  &._secondary {
+    border: none;    
+    background: $green;
+    color: $primary;
+  }
+  @include tablet-small {
+    @include text($ffMain, 16rem, 24rem, 400, $secondary);
+    padding: 12px 47px;
+  }
+}
+h2 {
+  @include text($ffMain, 100rem, 110rem, 400, $primary); 
+  
+  text-align: center;
+  @include tablet {
+    @include text($ffMain, 42rem, 52rem, 400, $primary);
+  }
+}
+h3 {
+  @include text($ffMain, 58rem, 64rem, 400, $primary);
+  background: linear-gradient(to right bottom, #9be5a4, #7be885);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+  text-align: center;
+  @include tablet {
+    @include text($ffMain, 32rem, 42rem, 400, $primary);
+  }
+}
+h4 {
+  @include text($ffMain, 40rem, 50rem, 400, $primary);
+  text-align: center;
+
+  @include tablet {
+    @include text($ffMain, 24rem, 34rem, 400, $primary);
+  }
+}
+.desc {
+  @include text($ffMain, 18rem, 29rem, 400, $secondary);
+  @include mobile {
+    @include text($ffMain, 13rem, 22rem, 400, $secondary);
+    max-width: 85vw;
+  }
+}
+*::-webkit-scrollbar {
+  width: 14rem;
+  height: 85rem;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 16rem;
+  height: 85px;
+  width: 14rem;
+  background-color: $primary;
+  border: 1px solid $light-brown;
+}
+*::-webkit-scrollbar-track {
+  background: $secondary;
+  /* color of the tracking area */
+}
+
+@media (hover: hover) {
+  .btn {
+    &:hover {
+      color: $primary;
+      background: $green;
+      box-shadow: 3rem 3rem 10rem $primary;
+    }
+  }
+  .btn._secondary {
+    &:hover {
+      box-shadow: 3rem 3rem 15rem $green;
+    }
+  }
+}

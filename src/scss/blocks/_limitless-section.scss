@@ -1,0 +1,110 @@
+.limitless {
+  &__top {
+    padding-top: 90rem;
+    padding-bottom: 200rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet-small {
+        padding-bottom: 120rem;
+    }
+
+    h2 {
+      margin-bottom: 56rem;
+      max-width: 1035rem;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21rem;
+    margin-bottom: 69rem;
+  }
+  h4 {
+    margin: 53rem 0;
+  }
+
+  &__desc,
+  &__info {
+    color: $primary;
+    max-width: 650rem;
+    text-align: center;
+  }
+  &__info {
+    margin-bottom: 14rem;
+  }
+
+  &__btn {
+    margin-top: 40rem;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("/img/blob.svg") top right / cover no-repeat;
+    color: $grey;
+    padding-bottom: 170rem;
+    @include tablet-small {
+        background-position: center center;
+    }
+    &__deco {
+      max-width: 499rem;
+      width: 100%;
+      height: 195rem;
+      background: $grey;
+      border-radius: 100rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include tablet-small {
+        max-width: 350rem;
+        height: 126rem;
+      }
+    }
+
+    &__circle {
+      background: linear-gradient(
+        to right bottom,
+        #b9e2bf,
+        #9be5a4,
+        #7be885,
+        #56e963,
+        #0de935
+      );
+      border-radius: 50%;
+      width: 100%;
+      max-width: 176rem;
+      max-height: 176rem;
+      height: 100%;
+      @include tablet-small {
+        max-width: 106rem;
+        max-height: 106rem;
+      }
+    }
+    h3 {
+      max-width: 536rem;
+      margin: 81rem auto 59rem;
+      color: $grey;
+      span {
+        letter-spacing: 1.2rem;
+      }
+    }
+
+    &__desc {
+      max-width: 634rem;
+      margin-bottom: 29rem;
+      text-align: center;
+      color: $grey;
+      &:last-child {
+        max-width: 584rem;
+        @include tablet-small {
+            max-width: 75vw;
+          }
+      }
+      @include tablet-small {
+        max-width: 75vw;
+      }
+    }
+  }
+}

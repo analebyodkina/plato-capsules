@@ -1,0 +1,133 @@
+.reviews {
+  padding: 54rem 25rem 120rem;
+  position: relative;
+  width: 100%;
+  &::before {
+    content: "";
+    background: url(/img/circle-deco.svg);
+    position: absolute;
+    top: -17px;
+    left: 5px;
+    width: 269px;
+    height: 288px;
+    z-index: -1;
+    @include tablet-small {
+      width: 109px;
+      height: 118px;
+      background-size: cover;
+    }
+  }
+  &::after {
+    content: "";
+    background: url(/img/leaf.svg);
+    position: absolute;
+    top: -37px;
+    right: 55px;
+    width: 164px;
+    height: 178px;
+    z-index: -1;
+    @include tablet-small {
+      top: 130rem;
+      right: 100rem;
+      width: 94rem;
+      height: 98rem;
+      background-size: cover;
+    }
+  }
+  h3 {
+    padding-bottom: 86rem;
+    max-width: 860rem;
+    margin-inline: auto;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 15rem;
+  }
+  &__image {
+    margin-bottom: 31rem;
+    max-width: 150rem;
+    max-height: 150rem;
+    border-radius: 63% 37% 40% 60% / 51% 32% 68% 49%;
+    img {
+      display: block;
+      max-width: 150rem;
+      height: 150rem;
+      border-radius: 63% 37% 40% 60% / 51% 32% 68% 49%;
+    }
+    &._primary {
+      border-radius: 29% 71% 54% 46% / 41% 47% 53% 59%;
+      img {
+        border-radius: 29% 71% 54% 46% / 41% 47% 53% 59%;
+      }
+    }
+    &._secondary {
+      border-radius: 65% 35% 43% 57% / 62% 47% 53% 38%;
+      img {
+        border-radius: 65% 35% 43% 57% / 62% 47% 53% 38%;
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: 16px;
+    flex-grow: 1;
+    @include text($ffMain, 22rem, 31rem, 400, $primary);
+    max-width: 422rem;
+    @include tablet-small {
+      @include text($ffMain, 16rem, 24rem, 400, $primary);
+    }
+  }
+
+  &__name {
+    max-width: 149rem;
+    margin-top: auto;
+    color: $primary;
+  }
+}
+
+html .reviews__swiper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 30rem 0;
+  margin-bottom: 182rem;
+  @include tablet-small {
+    margin-bottom: 62rem;
+  }
+}
+html .swiper {
+  width: 100%;
+}
+
+html .swiper-slide {
+  width: 475px;
+  height: auto;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  @include tablet-small {
+    max-width: 70vw;
+  }
+}
+
+html .swiper-slide-active {
+  filter: blur(0px);
+}
+
+html .swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+html .swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}

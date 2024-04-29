@@ -1,0 +1,32 @@
+.mobile-nav {
+  @include tablet {
+    position: fixed;
+    // top: 0;
+    right: -100%;
+    top: -100%;
+    width: 80%;
+    height: 80%;
+    z-index: 99;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    // background: linear-gradient(209deg, #4287b3 -17.38%, #133f6b 78.4%), #276195;
+    background: $green;
+    transition: $transition;
+  }
+  
+}
+
+.mobile-nav--open {
+  top: -20%;
+  right: -20%;
+  @include mobile {
+    width: 110vw;
+    height: 110vw;
+    top: -15%;
+    right: -30%;
+  }
+}

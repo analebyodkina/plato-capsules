@@ -1,0 +1,204 @@
+.capsules {
+  &__top {
+    background: $primary;
+    color: $secondary;
+    border-radius: 0% 0% 82% 38% / 0% 0% 15% 5%;
+    padding: 0 15rem 172rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      color: $secondary;
+      max-width: 950rem;
+      @include tablet {
+        max-width: 70vw;
+      }
+    }
+    .capsules__btn {
+      margin-top: 52rem;
+    }
+  }
+
+  &__list {
+    padding-top: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 17rem;
+    max-width: 865rem;
+  }
+
+  &__middle {
+    padding: 250rem 0 200rem;
+    display: flex;
+    justify-content: center;
+    gap: 40rem;
+
+    position: relative;
+    @include tablet {
+      padding: 150rem 0 100rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &:before {
+      content: "";
+      background: url(/img/leaf.svg) center no-repeat;
+      position: absolute;
+      left: 70rem;
+      bottom: 170rem;
+      width: 165rem;
+      height: 173px;
+      transform: rotate(-70deg);
+      z-index: -1;
+      @include tablet {
+        left: 25rem;
+        bottom: 50rem;
+      }
+    }
+    &:after {
+      content: "";
+      background: url(/img/leaf.svg) center no-repeat;
+      position: absolute;
+      right: 70rem;
+      top: 30rem;
+      width: 167rem;
+      height: 181rem;
+      z-index: -1;
+      @include tablet {
+        right: 40rem;
+        top: 0rem;
+        width: 114rem;
+        height: 118rem;
+        background-size: cover;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 480rem;
+    width: 100%;
+    height: 533rem;
+    border-radius: 43% 57% 71% 33% / 51% 54% 46% 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 1;
+    position: relative;
+    background: $light-brown;
+    @include mobile {
+      height: 75vw;
+      width: 65vw;
+    }
+    img {
+      max-width: 320rem;
+      transform: scale(1.5);
+      border-radius: 43% 57% 71% 33% / 51% 54% 46% 49%;
+      @include mobile {
+        max-width: 270rem;
+         transform: scale(1.2);;
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      max-width: 450rem;
+      width: 100%;
+      max-height: 573rem;
+      height: 100%;
+      background: $primary;
+      border-radius: 48% 52% 45% 55% / 41% 63% 37% 59%;
+      z-index: -1;
+    }
+  }
+
+  &__info {
+    flex-shrink: 0;
+    h2 {
+      text-align: left;
+      max-width: 490rem;
+      margin-bottom: 15rem;
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+
+  &__desc {
+    max-width: 537rem;
+    margin-bottom: 24rem;
+    color: $primary;
+  }
+  &__btn {
+    margin-top: 16rem;
+  }
+
+  &__bottom {
+    background: $primary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+      margin-bottom: 71rem;
+      max-width: 1000rem;
+      color: $secondary;
+      @include tablet {
+        max-width: 90vw;
+      }
+    }
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1214rem;
+    @include tablet-small {
+      max-width: 80vw;
+      grid-template-columns: repeat(auto-fill, 200rem);
+      row-gap: 20rem;
+    }
+  }
+  &__border {
+    transform: rotateX(180deg);
+    margin-top: -2px;
+  }
+
+  .table {
+    @include mobile {
+      padding-bottom: 40rem;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 20rem;
+      text-align: center;
+      padding: 12rem 60rem 50rem;
+      @include mobile {
+        padding: 11rem 30rem 40rem;
+      }
+      &:not(:last-child) {
+        border-right: 1px solid $secondary;
+        @include mobile {
+          border-right: none;
+          border-bottom: 1px solid $secondary;
+        }
+      }
+    }
+
+    &__number {
+      @include text($ffMain, 98rem, 98rem, 400, $secondary);
+      @include tablet {
+        @include text($ffMain, 54rem, 54rem, 400, $secondary);
+      }
+    }
+
+    &__desc {
+      @include text($ffMain, 22rem, 31rem, 400, $secondary);
+      @include tablet {
+        @include text($ffMain, 15rem, 24rem, 400, $secondary);
+      }
+    }
+  }
+}
+

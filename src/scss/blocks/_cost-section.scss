@@ -1,0 +1,151 @@
+.cost {
+  padding-top: 185rem;
+
+  position: relative;
+  width: 100%;
+  &::before {
+    content: "";
+    background: url(/img/circle-deco.svg);
+    position: absolute;
+    top: -17px;
+    left: 5px;
+    width: 269px;
+    height: 288px;
+    z-index: -1;
+    @include tablet-small {
+      width: 99px;
+      height: 118px;
+      background-size: cover;
+    }
+  }
+  &::after {
+    content: "";
+    background: url(/img/leaf.svg);
+    position: absolute;
+    top: -37px;
+    right: 55px;
+    width: 164px;
+    height: 178px;
+    z-index: -1;
+    @include tablet-small {
+      top: 130rem;
+      right: 100rem;
+      width: 94rem;
+      height: 98rem;
+      background-size: cover;
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 160rem;
+    @include tablet {
+      padding-bottom: 80rem;
+    }
+  }
+  h3 {
+    padding-bottom: 52rem;
+    max-width: 1026rem;
+    text-align: left;
+    @include tablet {
+      max-width: 80vw;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 17rem;
+    max-width: 643rem;
+    padding-bottom: 78rem;
+
+    .desc {
+      color: $primary;
+    }
+  }
+  &__bottom {
+    background: $primary;
+    border-radius: 0% 0% 82% 38% / 0% 0% 15% 5%;
+    padding-bottom: 147rem;
+  }
+  .bottom {    
+    h2 {
+      margin-bottom: 45rem;
+      
+    }
+    h4 {
+      margin-bottom: 74rem;
+    }
+    h2,
+    h4 {
+      color: $secondary;
+      max-width: 604rem;
+      margin-inline: auto;
+      @include tablet-small {
+        margin-bottom: 25rem;
+      }
+    }
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40rem;
+      @include tablet-small {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+    }
+
+    &__img {
+      border-radius: 33% 67% 52% 48% / 52% 53% 47% 48%;
+      img {
+        border-radius: 33% 67% 52% 48% / 52% 53% 47% 48%;
+      }
+      @include tablet-small {
+        max-width: 65vw;
+      }
+    }
+    &__desc {
+      padding-bottom: 21rem;
+      &:first-child {
+        padding-bottom: 42rem;
+      }
+      @include tablet-small {
+        max-width: 75vw;
+      }
+    }
+    &__info {
+    }
+
+    &__btns {
+      margin-top: 24rem;
+      margin-bottom: 29rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15rem;
+    }
+
+    &__buy {
+      @include text($ffMain, 24rem, 36rem, 400, $secondary);
+      text-align: center;
+      margin-bottom: 5rem;
+      @include tablet {
+        @include text($ffMain, 18rem, 30rem, 400, $secondary);
+      }
+    }
+    &__btn {
+      border: 2rem solid $secondary;
+    }
+
+    &__shipping {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      img {
+        max-width: 24rem;
+      }
+    }
+  }
+}

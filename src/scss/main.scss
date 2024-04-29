@@ -1,0 +1,13 @@
+/* Base */
+@import './base/reset';
+@import './base/vars';
+@import './base/mixins';
+@import './base/base';
+@import './base/utils';
+@import './base/sticky-footer';
+
+/* Blocks */
+@import './blocks/*.scss';
+
+/* No styles code below. Only in modules */
+/* Не пишите CSS код ниже. Только в подключаемых файлах */

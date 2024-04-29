@@ -1,0 +1,85 @@
+.ings {
+  padding: 200rem 15rem 190rem;
+  @include tablet {
+    padding: 70rem 10rem;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+    margin-bottom: 120rem;
+    @include tablet-small {
+      gap: 50rem;
+      margin-bottom: 70rem;
+    }
+  }
+  &__title,
+  &__desc {
+    max-width: 950rem;
+    margin-inline: auto;
+    @include tablet {
+      max-width: 75vw;
+    }
+  }
+
+  &__desc {
+    @include text($ffMain, 40rem, 50rem, 400, $primary);
+    text-align: center;
+    padding-bottom: 50rem;
+    @include tablet {
+      @include text($ffMain, 20rem, 34rem, 400, $primary);
+    }
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 26rem;
+    @include tablet-small {
+      grid-template-columns: 1fr;
+      max-width: 75vw;
+      margin-inline: auto;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25rem;
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+    @include tablet-small {
+      flex-direction: column;
+    }
+  }
+  @include tablet-small {
+    flex-direction: column;
+  }
+  &__image {
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16rem;
+    max-width: 530rem;
+    @include tablet-small {
+      text-align: center;
+    }
+  }
+
+  &__title,
+  &__desc {
+    color: $primary;
+  }
+
+  &__slogan {
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      padding-bottom: 24rem;
+    }
+  }
+}

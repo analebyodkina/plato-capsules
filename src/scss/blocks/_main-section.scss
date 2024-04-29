@@ -1,0 +1,83 @@
+.main-section {
+  position: relative;
+  background: $main-bg;
+
+  img {
+    position: absolute;    
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    @include mobile {
+      top: 0;
+      left: 0;
+      width: 100%;
+      filter: opacity(0.8) brightness(0.8);
+    }
+  }
+
+  &__top {
+    padding: 200rem 0 36rem 25rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    @include tablet-small {
+      padding: 170rem 15rem 106rem;
+      margin-inline: auto;
+    }
+
+    h1 {
+      @include text($ffMain, 97rem, 116rem, 400, $primary);
+      max-width: 683rem;
+      padding-bottom: 38rem;
+      @include tablet-small {
+        @include text($ffMain, 47rem, 56rem, 400, $primary);
+        text-align: center;
+        text-shadow: 1rem 1rem 3rem $secondary;
+      }
+    }
+  }
+
+  &__desc {
+    @include text($ffMain, 22rem, 31rem, 400, $primary);
+    padding-bottom: 39rem;
+    @include tablet-small {
+      max-width: 80vw;
+      text-align: center;
+      margin-inline: auto;
+      text-shadow: 1rem 1rem 3rem $secondary;
+    }
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 683rem;
+    align-items: center;
+    gap: 26rem;
+    @include tablet-small {
+      grid-template-columns: 1fr;
+      max-width: 60vw;
+      margin-inline: auto;
+    }
+  }
+  &__btn {
+    @include tablet-small {      
+      box-shadow:  1rem 1rem 5rem $secondary;
+    }
+    &._primary {
+      @include tablet-small {        
+        text-shadow: 1rem 1rem 3rem $secondary;
+        box-shadow:  1rem 1rem 5rem $secondary;
+      }
+    }
+  }
+
+  &__deco {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-top: auto;
+  }
+}
