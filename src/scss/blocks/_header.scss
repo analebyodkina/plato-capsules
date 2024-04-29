@@ -34,8 +34,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: 20px;
+      row-gap: 10px;
       font-size: 28px;
+      width: fit-content; 
+      padding-left: 60rem;
     }
   }
   &__btn {

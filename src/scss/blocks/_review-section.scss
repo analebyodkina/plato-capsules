@@ -37,7 +37,12 @@
   h3 {
     padding-bottom: 86rem;
     max-width: 860rem;
-    margin-inline: auto;
+    margin-inline: auto;    
+    background: $primary;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    
   }
   &__card {
     display: flex;

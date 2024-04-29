@@ -5,7 +5,7 @@ const replace = require('gulp-replace');
 const fileInclude = require('gulp-file-include');
 const htmlclean = require('gulp-htmlclean');
 const webpHTML = require('gulp-webp-retina-html');
-const typograf = require('gulp-typograf');
+// const typograf = require('gulp-typograf');
 
 // SASS
 const sass = require('gulp-sass')(require('sass'));
@@ -69,16 +69,16 @@ gulp.task('html:docs', function () {
 				'$1./$4$5$7$1'
 			)
 		)
-		.pipe(
-			typograf({
-				locale: ['ru', 'en-US'],
-				htmlEntity: { type: 'digit' },
-				safeTags: [
-					['<\\?php', '\\?>'],
-					['<no-typography>', '</no-typography>'],
-				],
-			})
-		)
+		// .pipe(
+		// 	typograf({
+		// 		locale: ['ru', 'en-US'],
+		// 		htmlEntity: { type: 'digit' },
+		// 		safeTags: [
+		// 			['<\\?php', '\\?>'],
+		// 			['<no-typography>', '</no-typography>'],
+		// 		],
+		// 	})
+		// )
 		.pipe(
 			webpHTML({
 				extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
