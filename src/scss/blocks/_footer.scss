@@ -16,7 +16,7 @@
     }
     a {
       @include text($ffMain, 16rem, 26rem, 400, $primary);
-	  transition: $transition;
+      transition: $transition;
     }
     .btn {
       @include text($ffMain, 16rem, 26rem, 400, $secondary);
@@ -27,11 +27,71 @@
   }
 
   &__socials {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+      position: relative;
+      z-index: 2;
+    }
+    ul a {
+      @include text($ffMain, 65rem, 105rem, 400, $primary);
+      @include tablet {
+        @include text($ffMain, 45rem, 55rem, 400, $primary);
+      }
+    }
+    .footer__deco {
+      position: absolute;
+      top: 51rem;
+      right: 49rem;
+      // z-index: -1;
+      max-width: 429rem;
+      width: 100%;
+      height: 168rem;
+      background: $grey;
+      border-radius: 100rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include tablet-small {
+        max-width: 350rem;
+        height: 126rem;
+      }
+    }
+    .footer__circle {
+      background: linear-gradient(
+        to right bottom,
+        #b9e2bf,
+        #9be5a4,
+        #7be885,
+        #56e963,
+        #0de935
+      );
+      border-radius: 50%;
+      width: 100%;
+      max-width: 151rem;
+      max-height: 151rem;
+      height: 100%;
+      @include tablet-small {
+        max-width: 106rem;
+        max-height: 106rem;
+      }
+    }
   }
-
-  &__bottom {
+  &__copyright {
+    align-self: flex-end;
+    color: $primary;
+    text-align: end
+  }
+  &__br {
+    display: inline-block;
+    width: 7rem;
   }
 }
+
 .form {
   &__title {
     @include text($ffMain, 44rem, 53rem, 400, $primary);
@@ -46,8 +106,8 @@
     width: 100%;
     color: $primary;
     padding: 7rem 45rem 7rem 10rem;
-	overflow: hidden;
-	text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__checkbox {
     position: absolute;
@@ -97,7 +157,7 @@
     }
     .footer__links a {
       &:hover {
-        color: $green;        
+        color: $green;
       }
     }
   }

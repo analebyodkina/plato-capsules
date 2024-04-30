@@ -2,7 +2,7 @@
   background: $primary;
   &__container {
     @include flex-between;
-    padding: 35rem 40rem 40rem;    
+    padding: 35rem 40rem 40rem;
   }
   &__nav {
     flex-grow: 1;
@@ -21,6 +21,9 @@
       @include tablet {
         @include text($ffMain, 22rem, 32rem, 400, $primary);
       }
+      @include mobile{
+        @include text($ffMain, 16rem, 20rem, 400, $primary);
+      }
     }
     li {
       &:first-child {
@@ -33,16 +36,20 @@
     @include tablet {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-end;
       row-gap: 10px;
       font-size: 28px;
-      width: fit-content; 
+      width: fit-content;
       padding-left: 60rem;
     }
   }
   &__btn {
     @include text($ffMain, 16rem, 26rem, 400, $primary);
     padding: 12px 47px;
+    @include tablet {
+      font-size: 16rem;
+      padding: 10rem 20rem;
+    }
   }
 
   &__options {

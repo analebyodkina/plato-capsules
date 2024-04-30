@@ -1,8 +1,10 @@
 .cost {
   padding-top: 185rem;
-
   position: relative;
   width: 100%;
+  @include tablet-small {
+    padding-top: 105rem;
+  }
   &::before {
     content: "";
     background: url(/img/circle-deco.svg);
@@ -13,7 +15,7 @@
     height: 288px;
     z-index: -1;
     @include tablet-small {
-      width: 99px;
+      width: 118px;
       height: 118px;
       background-size: cover;
     }
@@ -28,7 +30,7 @@
     height: 178px;
     z-index: -1;
     @include tablet-small {
-      top: 130rem;
+      top: 680rem;
       right: 100rem;
       width: 94rem;
       height: 98rem;
@@ -40,8 +42,27 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 160rem;
+    position: relative;
     @include tablet {
       padding-bottom: 80rem;
+    }
+    &::after {
+      content: "";
+      background: url(/img/leaf.svg);
+      position: absolute;
+      bottom: 157px;
+      left: 85px;
+      width: 164px;
+      height: 178px;
+      z-index: -1;
+      transform: rotate(-75deg);
+      @include tablet-small {
+        bottom: 367px;
+      
+        width: 94rem;
+        height: 98rem;
+        background-size: cover;
+      }
     }
   }
   h3 {

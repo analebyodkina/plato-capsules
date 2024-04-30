@@ -1,7 +1,7 @@
 .mobile-nav {
   @include tablet {
     position: fixed;
-    // top: 0;
+
     right: -100%;
     top: -100%;
     width: 80%;
@@ -11,20 +11,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 40px;   
+    padding-top: 60rem;
     background: $green;
     transition: $transition;
   }
-  
 }
 
 .mobile-nav--open {
-  top: -20%;
-  right: -20%;
+  width: 70vw;
+  height: 65vw;
+  top: -10%;
+  right: -30%;
   @include mobile {
     width: 110vw;
     height: 110vw;
-    top: -15%;
+    top: -5%;
     right: -30%;
   }
 }
