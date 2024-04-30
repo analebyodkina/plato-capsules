@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet-small {
+      padding-top: 70rem;
+    padding-bottom: 40rem;
+    }
   }
   h4 {
     margin-bottom: 40rem;

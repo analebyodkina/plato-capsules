@@ -2,6 +2,9 @@
   padding: 54rem 25rem 120rem;
   position: relative;
   width: 100%;
+  @include tablet-small {
+    padding: 54rem 25rem;
+  }
   &::before {
     content: "";
     background: url(/img/circle-deco.svg);
@@ -42,6 +45,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    @include tablet-small {
+      padding-bottom: 46rem;
+    }
     
   }
   &__card {
