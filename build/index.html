@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plato</title>
+    <link rel="preload" fetchpriority="high" as="image" href="./img/main-bg.png" type="image/png">
     <link rel="stylesheet" href="./css/main.css" />    
 	<link
       rel="apple-touch-icon"
@@ -43,11 +44,11 @@
     </a>
     <nav class="header__nav mobile-nav">
       <ul class="header__list">
-        <li><a href="">Product</a></li>
-        <li><a href="">Learn</a></li>
-        <li><div class="btn _secondary header__btn">Shop</div></li>
-        <li><a href="##">My Account</a></li>
-        <li><a href="##">My Cart</a></li>
+        <li class="header__li"><a href="#product">Product</a></li>
+        <li class="header__li"><a href="#learn">Learn</a></li>
+        <li class="header__li"><a href="##" class="btn _secondary header__btn">Shop</a></li>
+        <li class="header__li"><a href="##">My Account</a></li>
+        <li class="header__li"><a href="##">My Cart</a></li>
       </ul>
     </nav>
     
@@ -58,13 +59,13 @@
   </div>
 </header>
  <section class="main-section">
-  <img src="./img/main-bg.png" alt="hands holding plato pills bottle" />
+  <img fetchpriority="high" src="./img/main-bg.png" alt="hands holding plato pills bottle" />
   <div class="main-section__top container">
     <h1>More focus. Fewer off days.</h1>
     <div class="main-section__desc">A simple daily habit for staying focused without a crash.</div>
     <div class="main-section__btns">
-      <div class="btn main-section__btn _primary">Try 7 Days for $7 </div>
-      <div class="btn main-section__btn">Shop Now </div>
+      <a href="##" class="btn main-section__btn _primary">Try 7 Days for $7 </a>
+      <a href="##"class="btn main-section__btn">Shop Now </a>
     </div>
   </div>
   <div class="main-section__deco">
@@ -109,7 +110,7 @@
         <div class="swiper-slide swiper-slide--one">
           <div class="reviews__card">
             <div class="reviews__image">
-              <img
+              <img fetchpriority="low"
                 src="https://wallpapers.com/images/hd/indian-girl-casual-photographer-camera-of1e2gv8qut3bn37.jpg"
                 alt="customer's photo"
               />
@@ -130,7 +131,7 @@
         <div class="swiper-slide swiper-slide--two">
           <div class="reviews__card">
             <div class="reviews__image _primary">
-              <img
+              <img fetchpriority="low"
                 src="https://careers.yadro.com/wp-content/uploads/2022/07/kuanbekov-kopiya.png"
                 alt="customer's photo"
               />
@@ -151,7 +152,7 @@
         <div class="swiper-slide swiper-slide--three">
           <div class="reviews__card">
             <div class="reviews__image _secondary">
-              <img
+              <img fetchpriority="low"
                 src="https://media.istockphoto.com/id/1202259529/photo/lifes-taught-me-a-whole-lot-about-myself.jpg?s=612x612&w=0&k=20&c=oCO93Lp94MxZ8jQG9XKG3UynTieSbd61PPyH1RBqXrs="
                 alt="customer's photo"
               />
@@ -171,7 +172,7 @@
         <div class="swiper-slide swiper-slide--four">
           <div class="reviews__card">
             <div class="reviews__image">
-              <img
+              <img fetchpriority="low"
                 src="https://st3.depositphotos.com/10654668/17288/i/450/depositphotos_172880694-stock-photo-mature-man-in-bar.jpg"
                 alt="customer's photo"
               />
@@ -192,7 +193,7 @@
         <div class="swiper-slide swiper-slide--five">
           <div class="reviews__card">
             <div class="reviews__image _primary">
-              <img
+              <img fetchpriority="low"
                 src="https://media.istockphoto.com/id/507480872/photo/portrait-of-a-mature-man-smiling-at-the-camera.webp?b=1&s=170667a&w=0&k=20&c=av98rjIO2MrzLaOJsyoaAWupCkepZK1TJ0cu-DKBKAw="
                 alt="customer's photo"
               />
@@ -249,13 +250,13 @@
   </div>
 </section>
 
-      <section class="ings container">
-    <h2 class="ings__title">Making it harder to get off task</h2>
+      <section class="ings container" >
+    <h2 class="ings__title" id="product">Making it harder to get off task</h2>
     <div class="ings__desc">Four safe ingredients to target focus, fatigue, and energy drain</div>
     <div class="ings__list">
         <div class="ings__item item">
             <div class="item__image">
-                <img src="./img/herbs.png" alt="green tea and herbs">
+                <img width="664" height="581" src="./img/herbs.png" alt="green tea and herbs">
             </div>
             <div class="item__info">
                 <div class="item__title desc">L-Theanine, 200 mg</div>
@@ -267,7 +268,7 @@
 
         <div class="ings__item item">
             <div class="item__image">
-                <img src="./img/girl.png" alt="girl looking out of the book">
+                <img width="664" height="595" src="./img/girl.png" alt="girl looking out of the book">
             </div>
             <div class="item__info">
                 <div class="item__title desc">Bacopa Monnieri, 300 mg</div>
@@ -279,7 +280,7 @@
 
         <div class="ings__item item">
             <div class="item__image">
-                <img src="./img/plant.png" alt="exotic plant">
+                <img width="664" height="566" src="./img/plant.png" alt="exotic plant">
             </div>
             <div class="item__info">
                 <div class="item__title desc">Rhodiola Rosea, 100 mg</div>
@@ -291,7 +292,7 @@
 
         <div class="ings__item item">
             <div class="item__image">
-                <img src="./img/worker.png" alt="man in headphones working with computer">
+                <img width="664" height="601" src="./img/worker.png" alt="man in headphones working with computer">
             </div>
             <div class="item__info">
                 <div class="item__title desc">Panax Ginseng, 60 mg</div>
@@ -302,8 +303,8 @@
         </div>
     </div>
     <div class="ings__btns">
-        <div class="btn">Why These Ingredients </div>
-        <div class="btn">See Supplement Facts Label </div>
+        <a href="##" class="btn">Why These Ingredients </a>
+        <a href="##" class="btn">See Supplement Facts Label </a>
     </div>
 
 </section>
@@ -318,18 +319,18 @@
       <li>It can feel like you can never get ahead, and never get out from under your stress.</li>
       <li>Plato is a simple, daily ritual to help interrupt that cycle.</li>
     </ul>
-    <div class="btn capsules__btn _secondary">Learn More</div>
+    <a href="##"class="btn capsules__btn _secondary">Learn More</a>
   </div>
 
   <div class="capsules__middle container">
     <div class="capsules__img">
-      <img src="./img/two-pills.webp" alt="2 capsules of plato">
+      <img width="480" height="480" src="./img/two-pills.webp" alt="2 capsules of plato">
     </div>
     <div class="capsules__info">
       <h2>2 capsules of Plato</h2>
       <div class="capsules__desc desc">Not only does Plato help you adapt to stressful situations, it can help give you the energy and focus to make other positive changes in your life, beginning an upward cycle of change.</div>
       <div class="capsules__desc desc">Make the first move towards a new base level of calm with Plato.</div>
-      <div class="btn capsules__btn ">Take the First Step</div>
+      <a href="##" class="btn capsules__btn ">Take the First Step</a>
 
 
     </div>
@@ -366,7 +367,7 @@
 
       <div class="limitless">
   <div class="limitless__top container">
-    <h2>No, it’s not like the pill from Limitless</h2>
+    <h2 id="learn">No, it’s not like the pill from Limitless</h2>
     <ul class="limitless__list">
       <li class="desc limitless__desc">
         Any time you use a supplement, you might wonder if it’s safe.
@@ -380,7 +381,7 @@
       </li>
     </ul>
     <div class="limitless__img">
-      <img src="./img/plato-bottle.png" alt="bottle of plato image" />
+      <img width="902" height="570" src="./img/plato-bottle.png" alt="bottle of plato image" />
     </div>
     <h4>
       Noticeably improve your attention, enhance your focus, and support your
@@ -393,7 +394,7 @@
     <div class="desc limitless__info">
       Plato works, and there’s research to prove it.
     </div>
-    <div class="btn limitless__btn">See the Research</div>
+    <a href="##" class="btn limitless__btn">See the Research</a>
   </div>
 
   <div class="limitless__bottom bottom">
@@ -422,7 +423,7 @@
             <div  class="desc">Plato is well-tolerated, non-toxic, non-habit-forming and does not need to be cycled.</div >
             <div  class="desc">It’s one of the safest, easiest additions to your routine that you can invest in, and can help you get to a baseline of calm and clarity so you can tackle life head on.</div >
         </div>
-        <div class="btn cost__btn">Get Plato Now</div>
+        <a href="##"class="btn cost__btn">Get Plato Now</a>
     </div>
 
     <img src="./img/dark-waves.svg" alt="vawes deco">
@@ -431,16 +432,16 @@
         <h4>First Time Purchase Offer</h4>
         <div class="bottom__row container">
             <div class="bottom__img">
-                <img src="./img/hand.webp" alt="hand holding plato bottle">
+                <img width="700" height="700" src="./img/hand.png" alt="hand holding plato bottle">
             </div>
             <div class="bottom__info">
                 <div class="desc bottom__desc">We’re so confident you’ll love Plato that we’re willing to give it to you for next to nothing so that you can find out if it’s right for you.</div>
                 <div class="desc bottom__desc">No hidden extra fees, commitment or costs. Shipping is on us!</div>
                 <div class="desc bottom__desc">Once you feel the difference for yourself, then you can invest in a full month’s supply.</div>
                 <div class="bottom__btns">
-                    <div class="bottom__buy">Send My Sample Pack:</div>
-                    <div class="btn _secondary">Add to Cart | $7</div>
-                    <div class="btn bottom__btn">Shop All Options</div>
+                    <div href="##" class="bottom__buy">Send My Sample Pack:</div>
+                    <a href="##"v class="btn _secondary">Add to Cart | $7</a>
+                    <a href="##"class="btn bottom__btn">Shop All Options</a>
                 </div>
                 <div class="bottom__shipping">
                     <img src="./img/cube.svg" alt="cube icon">
@@ -517,7 +518,10 @@
 		<div class="footer__form form">
 			<div class="form__title"></div>
 			<div class="form__body">
-				<input type="email" name="email" class="form__input desc" autocomplete="off">				
+				<label for="email">
+					
+				</label>
+				<input type="email" name="email" class="form__input desc" autocomplete="off" aria-label="email input">				
 				<label for="checkbox" class="form__checkbox checkbox">					
 					<input type="checkbox" class="checkbox__input" id="checkbox" >
 					<span class="checkbox__mark"></span>
@@ -527,7 +531,7 @@
 			
 		</div>
 		<div class="footer__links">
-			<div class="btn">Shop</div>
+			<a href="##" class="btn">Shop</a>
 			<ul>
 				<li><a href="##">Blog</a></li>
 				<li><a href="##">Press</a></li>
