@@ -41,7 +41,7 @@
     }
     &:before {
       content: "";
-      background: url(img/leaf.svg) center no-repeat;
+      background: url(./img/leaf.svg) center no-repeat;
       position: absolute;
       left: 70rem;
       bottom: 170rem;
@@ -56,7 +56,7 @@
     }
     &:after {
       content: "";
-      background: url(img/leaf.svg) center no-repeat;
+      background: url(./img/leaf.svg) center no-repeat;
       position: absolute;
       right: 70rem;
       top: 30rem;
