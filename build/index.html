@@ -49,7 +49,7 @@
         <li class="header__li"><a href="#product">Product</a></li>
         <li class="header__li"><a href="#learn">Learn</a></li>
         <li class="header__li"><a href="##" class="btn _secondary header__btn">Shop</a></li>
-        <li class="header__li"><a href="##">My Account</a></li>
+        <li class="header__li"><a href="##" id="openPopUp">My Account</a></li>
         <li class="header__li"><a href="##">My Cart</a></li>
       </ul>
     </nav>
@@ -522,7 +522,28 @@
   </div>
   <img src="./img/dark-waves.svg" alt="waves image deco" class="contact__border" width="1920" height="242"/>
 </section>
- <footer class="footer">
+ 
+      <section class="pop-up-section">
+	<a href="##" class="btn" id="openPopUp"><span>Subscribe</span></a>
+	
+	<div class="pop-up"> 
+		<!-- вешаем вызов функции по клику на КАЖДУЮ кнопочку, кот должна открывать модальное окно -->
+		<div class="pop-up__container">
+			<div class="pop-up__body">
+				<h2 class="pop-up__title">Subscribe</h2>
+				<form>
+					<input type="text" placeholder="Enter your name">
+					<input type="email" placeholder="Enter your email">
+					<button type="submit">Subscribe</button>						
+				</form>
+				<div class="pop-up__close" id="closePopUp">&#10006</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+ 
+      <footer class="footer">
 	<div class="footer__top container">
 		<div class="footer__form form">
 			<div class="form__title"></div>

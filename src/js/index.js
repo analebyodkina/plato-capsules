@@ -1,4 +1,6 @@
 import mobileNav from "./modules/mobile-nav.js";
+import signUp from "./modules/sign-up.js";
+
 // import Swiper bundle with all modules installed
 import Swiper from "swiper/bundle";
 
@@ -36,6 +38,8 @@ var swiper = new Swiper(".swiper", {
 });
 
 mobileNav();
+
+signUp();
 
 // copyright
 var currentYear = new Date().getFullYear();
