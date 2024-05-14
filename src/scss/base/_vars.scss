@@ -1,35 +1,20 @@
-
-
 // fonts
-$ffMain:  "Roboto", sans-serif;;
+$ffMain: "Roboto", sans-serif;
 
 // colors
-$white: #FFFFFF;
-$grey: #BEBAB6;
+$white: #ffffff;
+$grey: #bebab6;
 $black: #000;
-$primary: #3A173C;
-$secondary: #E0DCDB;
+$primary: #3a173c;
+$secondary: #e0dcdb;
 $light-brown: #e3d4c1;
 $grey-img: #e1dddc;
-$grey-text: #C0B9B5;
-$green: #B9E2BF;
+$grey-text: #c0b9b5;
+$green: #b9e2bf;
 $main-bg: #d5c7b7;
-// background: linear-gradient(
-      //   to right bottom,
-      //   #b9e2bf,
-      //   #9be5a4,
-      //   #7be885,
-      //   #56e963,
-      //   #0de935
-      // );
-
-
-
 
 // radius
 $radius: 44px;
-// $radiusRound: 33px;
-// $radiusImage: 50%;
 
 // breakpoints
 $desktop-small: 1200px;
@@ -38,4 +23,4 @@ $tablet-small: 768px;
 $mobile: 576px;
 
 // utils
-$transition: .3s all ease-in-out;
+$transition: 0.3s all ease-in-out;

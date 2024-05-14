@@ -1,9 +1,53 @@
 .main-section {
   position: relative;
   background: $main-bg;
+  -webkit-animation: puff-in-bottom 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+    both;
+  animation: puff-in-bottom 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+
+  @-webkit-keyframes puff-in-bottom {
+    0% {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes puff-in-bottom {
+    0% {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
 
   img {
-    position: absolute;    
+    position: absolute;
     z-index: 1;
     top: 0;
     right: 0;
@@ -63,13 +107,13 @@
     }
   }
   &__btn {
-    @include tablet-small {      
-      box-shadow:  1rem 1rem 5rem $secondary;
+    @include tablet-small {
+      box-shadow: 1rem 1rem 5rem $secondary;
     }
     &._primary {
-      @include tablet-small {        
+      @include tablet-small {
         text-shadow: 1rem 1rem 3rem $secondary;
-        box-shadow:  1rem 1rem 5rem $secondary;
+        box-shadow: 1rem 1rem 5rem $secondary;
       }
     }
   }

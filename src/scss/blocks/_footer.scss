@@ -143,6 +143,7 @@
     border: 1rem solid $primary;
     position: relative;
     transition: 0.2s all ease-in-out;
+    border-radius: 6rem;
   }
   .checkbox__mark::after {
     content: "\2714";
@@ -178,6 +179,13 @@
     .footer__links a {
       &:hover {
         color: $green;
+        text-shadow: 1rem 1rem 2rem $primary;
+      }
+    }
+    a.btn {
+      &:hover,
+      &:active {      
+        color: $primary;
       }
     }
   }

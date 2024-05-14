@@ -50,17 +50,20 @@
       font-size: 16rem;
       padding: 10rem 20rem;
     }
-  }
-
-  &__options {
-  }
+  } 
 }
 @media (hover: hover) {
   .header__list a {
     &:hover,
     &:active {
-      box-shadow: inset 3rem 3rem 15rem $green;
-      color: $secondary;
+      text-shadow: 2rem 1rem 10rem $secondary;
+      color: $green;
+    }
+  }
+  a.header__btn {
+    &:hover,
+    &:active {      
+      color: $primary;
     }
   }
 }
