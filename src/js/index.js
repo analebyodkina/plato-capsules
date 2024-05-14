@@ -1,5 +1,4 @@
-import mobileNav from "./modules/mobile-nav.js";
-import signUp from "./modules/sign-up.js";
+
 
 // import Swiper bundle with all modules installed
 import Swiper from "swiper/bundle";
@@ -37,13 +36,53 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
-mobileNav();
-
-signUp();
 
 // copyright
 var currentYear = new Date().getFullYear();
 document.getElementById("footer-year").innerHTML = currentYear;
 
 
-AOS.init();
+const navBtn = document.querySelector('.mobile-nav-btn');
+const nav = document.querySelector('.mobile-nav');
+const menuIcon = document.querySelector('.nav-icon');
+const headerLink = document.querySelector('.header__li');
+const openPopUp = document.getElementById("openPopUp");
+const popUp = document.querySelector(".pop-up");
+const closePopUp = document.querySelector(".close");
+const popUpBody = document.querySelector(".pop-up__body");
+
+const toggleNav = () => {
+  nav.classList.toggle('mobile-nav--open');
+  menuIcon.classList.toggle('nav-icon--active');
+  document.body.classList.toggle('no-scroll');
+};
+
+const closeNav = () => {
+  nav.classList.remove('mobile-nav--open');
+  menuIcon.classList.remove('nav-icon--active');
+  document.body.classList.remove('no-scroll');
+};
+
+const togglePopUp = () => {
+  popUp.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
+  closeNav();
+};
+
+navBtn.onclick = toggleNav;
+
+headerLink.onclick = closeNav;
+
+openPopUp.onclick = togglePopUp;
+
+closePopUp.onclick = (event) => {
+  event.stopPropagation();
+  popUp.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+};
+
+popUpBody.onclick = (event) => {
+  if (!event.target.classList.contains('pop-up__close')) {
+    event.stopPropagation();
+  }
+};
