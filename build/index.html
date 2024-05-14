@@ -7,7 +7,8 @@
     <meta name="description" content="website about plato capsules for more energy and concentration">
     <title>Plato</title>
     <link rel="preload" fetchpriority="high" as="image" href="./img/main-bg.png" type="image/png">
-    <link rel="stylesheet" href="./css/main.css" />    
+    <link rel="stylesheet" href="./css/main.css" />   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
 	<link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -101,7 +102,7 @@
 
       <section class="reviews">
   <div class="container">
-    <h3>
+    <h3 data-aos="zoom-in" data-aos-duration="1000">
       Busy people love Plato for more energy, better focus, and a feeling of
       calm
     </h3>
@@ -265,7 +266,7 @@
             <div class="item__image">
                 <img width="664" height="581" src="./img/herbs.png" alt="green tea and herbs">
             </div>
-            <div class="item__info">
+            <div class="item__info" data-aos="fade-left">
                 <div class="item__title desc">L-Theanine, 200 mg</div>
                 <h3 class="item__slogan">the thing in green tea that you love</h3>
                 <div class="item__desc desc">Reduces temporary anxiety induced by stressful situations.</div>
@@ -277,7 +278,7 @@
             <div class="item__image">
                 <img width="664" height="595" src="./img/girl.png" alt="girl looking out of the book">
             </div>
-            <div class="item__info">
+            <div class="item__info" data-aos="fade-right">
                 <div class="item__title desc">Bacopa Monnieri, 300 mg</div>
                 <h3 class="item__slogan">a student’s secret weapon</h3>
                 <div class="item__desc desc">Improves attention, enhances focus, supports a positive mood.</div>
@@ -289,7 +290,7 @@
             <div class="item__image">
                 <img width="664" height="566" src="./img/plant.png" alt="exotic plant">
             </div>
-            <div class="item__info">
+            <div class="item__info" data-aos="fade-left">
                 <div class="item__title desc">Rhodiola Rosea, 100 mg</div>
                 <h3 class="item__slogan">the no worries root</h3>
                 <div class="item__desc desc">May help reduce cortisol response to stress, support a positive mood, and support concentration.</div>
@@ -301,7 +302,7 @@
             <div class="item__image">
                 <img width="664" height="601" src="./img/worker.png" alt="man in headphones working with computer">
             </div>
-            <div class="item__info">
+            <div class="item__info" data-aos="fade-right">
                 <div class="item__title desc">Panax Ginseng, 60 mg</div>
                 <h3 class="item__slogan">helps you stay in a productive flow</h3>
                 <div class="item__desc desc">Supports cognitive performance, improves working memory, reduces the perception of mental fatigue.</div>
@@ -319,7 +320,7 @@
   <img src="./img/dark-waves.svg" alt="waves image deco" width="1920" height="242"/>
   <div class="capsules__top">
     <h3>Two Capsules Daily:</h3>
-    <h3>Smart self care to reduce the symptoms of stress and help you focus</h3>
+    <h3 data-aos="zoom-in-up" data-aos-duration="1000">Smart self care to reduce the symptoms of stress and help you focus</h3>
     <ul class="capsules__list desc">
       <li>Your happiness (and ability to focus) are impacted by the amount of stress you experience. In the same way, negative feelings can contribute to physical and chemical stress in the body and brain.</li>
       <li>If you don’t have infinite control over your circumstances -- and who does? -- you can end up feeling trapped.</li>
@@ -329,12 +330,13 @@
     <a href="##"class="btn capsules__btn _secondary">Learn More</a>
   </div>
 
-  <div class="capsules__middle container">
+  <div class="capsules__middle container" data-aos="fade-up"
+   data-aos-duration="1000">
     <div class="capsules__img">
       <img width="480" height="480" src="./img/two-pills.webp" alt="2 capsules of plato">
     </div>
     <div class="capsules__info">
-      <h2>2 capsules of Plato</h2>
+      <h2 >2 capsules of Plato</h2>
       <div class="capsules__desc desc">Not only does Plato help you adapt to stressful situations, it can help give you the energy and focus to make other positive changes in your life, beginning an upward cycle of change.</div>
       <div class="capsules__desc desc">Make the first move towards a new base level of calm with Plato.</div>
       <a href="##" class="btn capsules__btn ">Take the First Step</a>
@@ -374,7 +376,7 @@
 
       <div class="limitless">
   <div class="limitless__top container">
-    <h2 id="learn">No, it’s not like the pill from Limitless</h2>
+    <h2 data-aos="zoom-in" data-aos-duration="1000">No, it’s not like the pill from Limitless</h2>
     <ul class="limitless__list">
       <li class="desc limitless__desc">
         Any time you use a supplement, you might wonder if it’s safe.
@@ -390,7 +392,7 @@
     <div class="limitless__img">
       <img width="902" height="570" src="./img/plato-bottle.png" alt="bottle of plato image" />
     </div>
-    <h4>
+    <h4 id="learn">
       Noticeably improve your attention, enhance your focus, and support your
       concentration without the question marks surrounding sourcing or safety.
     </h4>
@@ -435,7 +437,7 @@
 
     <img src="./img/dark-waves.svg" alt="vawes deco" width="1920" height="242">
     <div class="cost__bottom bottom">
-        <h2>7 Days for $7</h2>
+        <h2 data-aos="zoom-in" data-aos-duration="1000">7 Days for $7</h2>
         <h4>First Time Purchase Offer</h4>
         <div class="bottom__row container">
             <div class="bottom__img">
@@ -528,7 +530,7 @@
 				<label for="email">
 					
 				</label>
-				<input type="email" name="email" class="form__input desc" autocomplete="off" aria-label="email input">				
+				<input type="email" name="email" id="email" class="form__input desc" autocomplete="off" aria-label="email input">				
 				<label for="checkbox" class="form__checkbox checkbox">					
 					<input type="checkbox" class="checkbox__input" id="checkbox" >
 					<span class="checkbox__mark"></span>
@@ -566,7 +568,7 @@
 			</ul>
 			<div class="footer__copyright desc">
 				<div>© <span id="footer-year"></span>, goplato.com </div>
-				<div>Design: Sofia <span class="footer__br"></span>Code: A.Lebjodkina</div>
+				<div>Design: Sofia <span class="footer__br"></span>Code: Ana L.</div>
 			</div>
 		</div>
 
@@ -577,5 +579,6 @@
     </main>
     
     <script src="./js/index.bundle.js"></script>
+    
   </body>
 </html>

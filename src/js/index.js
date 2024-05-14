@@ -5,6 +5,10 @@ import Swiper from "swiper/bundle";
 // import styles bundle
 import "swiper/css/bundle";
 
+// on scroll animate
+import AOS from 'aos';
+AOS.init();
+
 var swiper = new Swiper(".swiper", {
   effect: "coverflow",
   grabCursor: true,
@@ -36,3 +40,6 @@ mobileNav();
 // copyright
 var currentYear = new Date().getFullYear();
 document.getElementById("footer-year").innerHTML = currentYear;
+
+
+AOS.init();

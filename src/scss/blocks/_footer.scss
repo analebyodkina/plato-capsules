@@ -186,6 +186,7 @@
       &:hover,
       &:active {      
         color: $primary;
+        text-shadow: none;
       }
     }
   }
