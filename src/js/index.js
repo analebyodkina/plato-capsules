@@ -45,7 +45,7 @@ document.getElementById("footer-year").innerHTML = currentYear;
 const navBtn = document.querySelector('.mobile-nav-btn');
 const nav = document.querySelector('.mobile-nav');
 const menuIcon = document.querySelector('.nav-icon');
-const headerLink = document.querySelector('.header__li');
+const headerLinks = document.querySelectorAll('.header__li');
 const openPopUp = document.getElementById("openPopUp");
 const popUp = document.querySelector(".pop-up");
 const closePopUp = document.querySelector(".close");
@@ -71,7 +71,9 @@ const togglePopUp = () => {
 
 navBtn.onclick = toggleNav;
 
-headerLink.onclick = closeNav;
+headerLinks.forEach(headerLink => {
+  headerLink.onclick = closeNav;
+});
 
 openPopUp.onclick = togglePopUp;
 

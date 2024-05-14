@@ -56,7 +56,8 @@
     @include mobile {
       top: 0;
       left: 0;
-      width: 100%;
+      
+      max-width: 100%;
       filter: opacity(0.8) brightness(0.8);
     }
   }

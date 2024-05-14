@@ -32,25 +32,25 @@
 		}
     }
     &__title {
-        @include text ($ffMain, 2.6rem, 3rem, 700, $green);
+        font-size: 26rem;
+        line-height: 30rem;
+        font-weight: 700;
         margin-bottom: 25px;
-        @include mobile {
-			// возможно придется изменить
-		}
+        
     }
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    input {
-        border: 0;
-        outline: 0;
-        padding: 15px;
-        background-color: $secondary;
-        border-radius: 10px;
-        @include text ($ffMain, 1.6rem, 2rem, 400, $green);
-    }
+    // form {
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 20px;
+    // }
+    // input {
+    //     border: 0;
+    //     outline: 0;
+    //     padding: 15px;
+    //     background-color: $secondary;
+    //     border-radius: 10px;
+    //     @include text ($ffMain, 1.6rem, 2rem, 400, $green);
+    // }
     
     &__close {
         font-size: 20px;
